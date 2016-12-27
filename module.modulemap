@@ -1,9 +1,17 @@
 module CSDL [system] {
   header "/usr/include/SDL2/SDL.h"
-  header "/usr/include/SDL2/SDL_mixer.h"
-  header "/usr/include/SDL2/SDL_ttf.h"
   link "SDL2"
+  export *
+}
+
+module CSDL_mixer [system] {
+  header "/usr/include/SDL2/SDL_mixer.h"
   link "SDL2_mixer"
+  export *
+}
+
+module CSDL_ttf [system] {
+  header "/usr/include/SDL2/SDL_ttf.h"
   link "SDL2_ttf"
   export *
 }
